@@ -1,0 +1,96 @@
+body {
+    background: linear-gradient(180deg, #87ceeb, #e0f6ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.game-over {
+    background-color: #000;
+    border-radius: 10px;
+    padding: 40px;
+    text-align: center;
+    width: 400px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    color: #f00;
+    font-size: 36px;
+    font-family: 'Press Start 2P', cursive;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.play-again {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-family: 'Press Start 2P', cursive;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.play-again:hover {
+    background-color: #45a049;
+}
+
+.game-over::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    right: -50px;
+    bottom: -50px;
+    background-image: url('background.jpg');
+    background-repeat: repeat;
+    background-size: cover;
+    z-index: -1;
+    filter: blur(5px);
+}
+
+.game-over::after {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    right: -50px;
+    bottom: -50px;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+}
+
+@keyframes flicker {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+h1 {
+    animation: flicker 1s infinite;
+}
+
+.play-again {
+    margin-top: 30px;
+    padding: 12px 24px;
+    transition: all 0.3s;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+}
+
+.play-again:hover {
+    transform: scale(1.1);
+    background-color: #45a049;
+}
+
+.play-again:focus {
+    outline: none;
+}

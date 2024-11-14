@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.gameboard {
+    width: 100%;
+    height: 500px;
+    border-bottom: 15px solid #05a720;
+    margin: 0 auto;
+    position: relative;
+    overflow:hidden;
+    background: linear-gradient( #87ceeb, #e0f6ff);
+}
+
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: pipe-animation 1.5s infinite linear;
+}
+.mario {
+    width: 120px;
+    position: absolute;
+    bottom: 0;
+}
+
+.jump {
+    animation: jump 500ms infinite ease-out;
+}
+
+.pontuacao {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    color: #05a720;
+    font-family: Arial, sans-serif;
+}
+
+.pontuacao span {
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #05a720;
+    padding: 5px 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+.recorde {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    font-size: 18px;
+    color: #05a720;
+    font-family: Arial, sans-serif;
+}
+
+.recorde span {
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #05a720;
+    padding: 3px 8px;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+@keyframes pipe-animation {
+    from {
+        right: -80%;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+
+    40% {
+        bottom: 180px;
+    }
+    50% {
+        bottom: 180px;
+    }
+
+    60% {
+        bottom: 180px;
+    }
+ 
+    100% {
+        bottom: 0;
+    }
+}

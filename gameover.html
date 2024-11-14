@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="gameover.css">
+    <title>Game Over</title>
+</head>
+<body>
+    <div class="game-over">
+        <h1>Game Over</h1>
+        <button class="play-again">Jogar Novamente</button>
+    </div>
+    <script src="javascript.js"></script>
+    <script>
+        const playAgainButton = document.querySelector('.play-again');
+        playAgainButton.addEventListener('click', () => {
+            window.location.href = "index.html";
+        });
+    </script>
+</body>
+</html>
